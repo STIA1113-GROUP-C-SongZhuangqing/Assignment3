@@ -1,0 +1,1146 @@
+package project;
+
+import java.util.Scanner;
+
+
+public class Duixiang {
+	public static void main(String[] args) {
+		
+		Scanner scan=new Scanner(System.in);
+		
+		Type Car=new Type();
+		Car.name="Car";
+		Car.number=1;
+		
+		Type MPV=new Type();
+		MPV.name="MPV";
+		MPV.number=2;
+		
+		Type SUV=new Type();
+		SUV.name="SUV";
+		SUV.number=3;
+		
+		Type Sports=new Type();
+		Sports.name="Sports car";
+		Sports.number=4;
+		
+		Type Truck=new Type();
+		Truck.name="Truck";
+		Truck.number=5;
+		
+		Brand Car1=new Brand();
+		Car1.str[0]="1.Audi A6 "; 
+		Car1.str[1]="2.COROLLA"; 
+		Car1.str[2]="3.LAVIDA"; 
+		
+		Brand MPV1=new Brand();
+		MPV1.str[0]="1.Odyssey "; 
+		MPV1.str[1]="2.Trumpchi M8"; 
+		MPV1.str[2]="3.SGMW-Victory"; 
+		
+		Brand SUV1=new Brand();
+		SUV1.str[0]="1.Audi Q5L "; 
+		SUV1.str[1]="2.HONDA-CR-V"; 
+		SUV1.str[2]="3.Haval H6";
+		
+		Brand Sports1=new Brand();
+		Sports1.str[0]="1.Ferrari F8 "; 
+		Sports1.str[1]="2.Aston Martin V8 Vantage"; 
+		Sports1.str[2]="3.Porsche 718";
+		
+		Brand Truck1=new Brand();
+		Truck1.str[0]="1.FAW Heavy truck "; 
+		Truck1.str[1]="2.IVECO"; 
+		Truck1.str[2]="3.SGMW";
+		
+		Configure AudiA6=new Configure();
+		AudiA6.name1="1.Low-level version:280,000RM";
+		AudiA6.name2="2.Premium version:430,000RM";
+		AudiA6.price1=280000;
+		AudiA6.price2=430000;
+		
+		
+		Configure COROLLA=new Configure();
+		COROLLA.name1="1.Low-level version:73,000RM";
+		COROLLA.name2="2.Premium version:93,000RM";
+		COROLLA.price1=73000;
+		COROLLA.price2=93000;
+		
+		Configure LAVIDA=new Configure();
+		LAVIDA.name1="1.Low-level version:73,000RM";
+		LAVIDA.name2="2.Premium version:99,000RM";
+		LAVIDA.price1=73000;
+		LAVIDA.price2=99000;
+		
+		
+		Configure Odyssey=new Configure();
+		Odyssey.name1="1.Low-level version:146,000RM";
+		Odyssey.name2="2.Premium version:233,000RM";
+		Odyssey.price1=146000;
+		Odyssey.price2=233000;
+		
+		
+		Configure TrumpchiM8=new Configure();
+		TrumpchiM8.name1="1.Low-level version:120,000RM";
+		TrumpchiM8.name2="2.Premium version:246,000RM";
+		TrumpchiM8.price1=120000;
+		TrumpchiM8.price2=246000;
+		
+		Configure SGMWVictory=new Configure();
+		SGMWVictory.name1="1.Low-level version:60,000RM";
+		SGMWVictory.name2="2.Premium version:93,000RM";
+		SGMWVictory.price1=60000;
+		SGMWVictory.price2=93000;
+		
+		Configure AudiQ5L=new Configure();
+		AudiQ5L.name1="1.Low-level version:266,000RM";
+		AudiQ5L.name2="2.Premium version:319,000RM";
+		AudiQ5L.price1=266000;
+		AudiQ5L.price2=319000;
+		
+		Configure HONDACRV=new Configure();
+		HONDACRV.name1="1.Low-level version:113,000RM";
+		HONDACRV.name2="2.Premium version:186,000RM";
+		HONDACRV.price1=113000;
+		HONDACRV.price2=186000;
+		
+		Configure HavalH6=new Configure();
+		HavalH6.name1="1.Low-level version:66,000RM";
+		HavalH6.name2="2.Premium version:100,000RM";
+		HavalH6.price1=66000;
+		HavalH6.price2=100000;
+		
+		Configure FerrariF8=new Configure();
+		FerrariF8.name1="1.Low-level version:1,994,000RM";
+		FerrariF8.name2="2.Premium version:2,266,000RM";
+		FerrariF8.price1=1994000;
+		FerrariF8.price2=2266000;
+		
+		Configure AstonMartin=new Configure();
+		AstonMartin.name1="1.Low-level version:1,130,000RM";
+		AstonMartin.name2="2.Premium version:1,389,000RM";
+		AstonMartin.price1=1130000;
+		AstonMartin.price2=1389000;
+		
+		Configure Porsche718=new Configure();
+		Porsche718.name1="1.Low-level version:365,000RM";
+		Porsche718.name2="2.Premium version:1,050,000RM";
+		Porsche718.price1=365000;
+		Porsche718.price2=1050000;
+		
+		Configure FAWHeavytruck=new Configure();
+		FAWHeavytruck.name1="1.Low-level version:180,000RM";
+		FAWHeavytruck.name2="2.Premium version:306,000RM";
+		FAWHeavytruck.price1=180000;
+		FAWHeavytruck.price2=306000;
+		
+		Configure IVECO=new Configure();
+		IVECO.name1="1.Low-level version:73,000RM";
+		IVECO.name2="2.Premium version:106,000RM";
+		IVECO.price1=73000;
+		IVECO.price2=106000;
+		
+		Configure SGMW=new Configure();
+		SGMW.name1="1.Low-level version:27,000RM";
+		SGMW.name2="2.Premium version:40,000RM";
+		SGMW.price1=27000;
+		SGMW.price2=40000;
+		
+		Way common=new Way();
+		
+		infor information=new infor();
+		
+		
+		
+		
+		
+		System.out.println("Please enter your name:");
+		String names=scan.nextLine();
+		System.out.println("Please enter your phone number:");
+		int phone=scan.nextInt();
+		
+		
+		for(int i=0;i<2;i++) {
+			switch(i) {
+			case 0:
+				System.out.println("Welcome to Car Online Sales Platform");		
+				break;
+			case 1:
+				System.out.println("What kind of vehicle do you want to browse?(Please enter the number of the type.)");
+				break;
+			}
+		}
+	
+		System.out.println(Car.number+"."+Car.name);
+		System.out.println(MPV.number+"."+MPV.name);
+		System.out.println(SUV.number+"."+SUV.name);
+		System.out.println(Sports.number+"."+Sports.name);
+		System.out.println(Truck.number+"."+Truck.name);
+		int type=scan.nextInt();
+	switch(type) {
+	case 1:
+		Car1.putArray(Car1.str);
+		int brand=scan.nextInt();
+		if(brand==1) {
+			Configure.showPrice(AudiA6.name1, AudiA6.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				AudiA6.compare(AudiA6.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Audi A6";
+					AudiA6.compare(AudiA6.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Audi A6";
+					AudiA6.compare(AudiA6.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				AudiA6.compare(AudiA6.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Audi A6";
+					AudiA6.compare(AudiA6.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Audi A6";
+					AudiA6.compare(AudiA6.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==2) {
+			Configure.showPrice(COROLLA.name1, COROLLA.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				COROLLA.compare(COROLLA.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="COROLLA";
+					COROLLA.compare(COROLLA.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="COROLLA";
+					COROLLA.compare(COROLLA.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				COROLLA.compare(COROLLA.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="COROLLA";
+					COROLLA.compare(COROLLA.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="COROLLA";
+					COROLLA.compare(COROLLA.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==3) {
+			Configure.showPrice(LAVIDA.name1, LAVIDA.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				LAVIDA.compare(LAVIDA.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="LAVIDA";
+					LAVIDA.compare(LAVIDA.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="LAVIDA";
+					LAVIDA.compare(LAVIDA.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				LAVIDA.compare(LAVIDA.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="LAVIDA";
+					LAVIDA.compare(LAVIDA.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="LAVIDA";
+					LAVIDA.compare(LAVIDA.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}
+		break;
+	case 2:
+		MPV1.putArray(MPV1.str);
+		brand=scan.nextInt();
+		if(brand==1) {
+			Configure.showPrice(Odyssey.name1, Odyssey.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				Odyssey.compare(Odyssey.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Odyssey";
+					Odyssey.compare(Odyssey.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Odyssey";
+					Odyssey.compare(Odyssey.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				Odyssey.compare(Odyssey.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Odyssey";
+					Odyssey.compare(Odyssey.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Odyssey";
+					Odyssey.compare(Odyssey.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==2) {
+			Configure.showPrice(TrumpchiM8.name1, TrumpchiM8.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				TrumpchiM8.compare(TrumpchiM8.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Trumpchi M8";
+					TrumpchiM8.compare(TrumpchiM8.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Trumpchi M8";
+					TrumpchiM8.compare(TrumpchiM8.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				TrumpchiM8.compare(TrumpchiM8.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Trumpchi M8";
+					TrumpchiM8.compare(TrumpchiM8.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Trumpchi M8";
+					TrumpchiM8.compare(TrumpchiM8.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==3) {
+			Configure.showPrice(SGMWVictory.name1, SGMWVictory.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				SGMWVictory.compare(SGMWVictory.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="SGMW Victory";
+					SGMWVictory.compare(SGMWVictory.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="SGMW Victory";
+					SGMWVictory.compare(SGMWVictory.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				SGMWVictory.compare(SGMWVictory.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="SGMW Victory";
+					SGMWVictory.compare(SGMWVictory.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="SGMW Victory";
+					SGMWVictory.compare(SGMWVictory.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}
+		break;
+	case 3:
+		SUV1.putArray(SUV1.str);
+		brand=scan.nextInt();
+		if(brand==1) {
+			Configure.showPrice(AudiQ5L.name1, AudiQ5L.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				AudiQ5L.compare(AudiQ5L.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Audi Q5L";
+					AudiQ5L.compare(AudiQ5L.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Audi Q5L";
+					AudiQ5L.compare(AudiQ5L.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				AudiQ5L.compare(AudiQ5L.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Audi Q5L";
+					AudiQ5L.compare(AudiQ5L.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Audi Q5L";
+					AudiQ5L.compare(AudiQ5L.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==2) {
+			Configure.showPrice(HONDACRV.name1, HONDACRV.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				HONDACRV.compare(HONDACRV.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="HONDA-CR-V";
+					HONDACRV.compare(HONDACRV.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="HONDA-CR-V";
+					HONDACRV.compare(HONDACRV.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				HONDACRV.compare(HONDACRV.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="HONDA-CR-V";
+					HONDACRV.compare(HONDACRV.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="HONDA-CR-V";
+					HONDACRV.compare(HONDACRV.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==3) {
+			Configure.showPrice(HavalH6.name1, HavalH6.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				HavalH6.compare(HavalH6.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Haval H6";
+					HavalH6.compare(HavalH6.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Haval H6";
+					HavalH6.compare(HavalH6.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				HavalH6.compare(HavalH6.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Haval H6";
+					HavalH6.compare(HavalH6.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Haval H6";
+					HavalH6.compare(HavalH6.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}
+		break;
+	case 4:
+		Sports1.putArray(Sports1.str);
+		brand=scan.nextInt();
+		if(brand==1) {
+			Configure.showPrice(FerrariF8.name1, FerrariF8.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				FerrariF8.compare(FerrariF8.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Ferrari F8";
+					FerrariF8.compare(FerrariF8.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Ferrari F8";
+					FerrariF8.compare(FerrariF8.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				FerrariF8.compare(FerrariF8.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Ferrari F8";
+					FerrariF8.compare(FerrariF8.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Ferrari F8";
+					FerrariF8.compare(FerrariF8.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==2) {
+			Configure.showPrice(AstonMartin.name1, AstonMartin.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				AstonMartin.compare(AstonMartin.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Aston Martin V8 Vantage";
+					AstonMartin.compare(AstonMartin.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Aston Martin V8 Vantage";
+					AstonMartin.compare(AstonMartin.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				AstonMartin.compare(AstonMartin.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Aston Martin V8 Vantage";
+					AstonMartin.compare(AstonMartin.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Aston Martin V8 Vantage";
+					AstonMartin.compare(AstonMartin.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==3) {
+			Configure.showPrice(Porsche718.name1, Porsche718.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				Porsche718.compare(Porsche718.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Porsche 718";
+					Porsche718.compare(Porsche718.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Porsche 718";
+					Porsche718.compare(Porsche718.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				Porsche718.compare(Porsche718.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Porsche 718";
+					Porsche718.compare(Porsche718.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="Porsche 718";
+					Porsche718.compare(Porsche718.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}
+		break;
+	case 5:
+		Truck1.putArray(Truck1.str);
+		brand=scan.nextInt();
+		if(brand==1) {
+			Configure.showPrice(FAWHeavytruck.name1, FAWHeavytruck.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				FAWHeavytruck.compare(FAWHeavytruck.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="FAW Heavy truck";
+					FAWHeavytruck.compare(FAWHeavytruck.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="FAW Heavy truck";
+					FAWHeavytruck.compare(FAWHeavytruck.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				FAWHeavytruck.compare(FAWHeavytruck.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="FAW Heavy truck";
+					FAWHeavytruck.compare(FAWHeavytruck.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="FAW Heavy truck";
+					FAWHeavytruck.compare(FAWHeavytruck.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==2) {
+			Configure.showPrice(IVECO.name1, IVECO.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				IVECO.compare(IVECO.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="IVECO";
+					IVECO.compare(IVECO.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="IVECO";
+					IVECO.compare(IVECO.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				IVECO.compare(IVECO.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="IVECO";
+					IVECO.compare(IVECO.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="IVECO";
+					IVECO.compare(IVECO.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}else if(brand==3) {
+			Configure.showPrice(SGMW.name1, SGMW.name2);
+			int p=scan.nextInt();
+			if(p==1) {
+				SGMW.compare(SGMW.price1);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="SGMW";
+					SGMW.compare(SGMW.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="SGMW";
+					SGMW.compare(SGMW.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}else if(p==2) {
+				SGMW.compare(SGMW.price2);
+				common.way(common.w1, common.w2);
+				int pick=scan.nextInt();
+				if(pick==1) {
+					common.fw=common.w1;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="SGMW";
+					SGMW.compare(SGMW.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}else if(pick==2) {
+					common.fw=common.w2;
+					common.finalway(common.fw);
+					System.out.println("The information for you:");
+					information.name=names;
+					information.number=phone;
+					information.car="SGMW";
+					SGMW.compare(SGMW.price1);
+					information.way=common.fw;
+					information.showinfor(information.number,information.name,information.car,information.way);
+					
+				}
+			}
+		}
+		break;
+	}
+	}
+}
+	
+	class Type{
+		String name;
+		int number;
+	}
+	
+	
+	class Configure{
+		String name1;
+		String name2;
+		int price1;
+		int price2;
+		public static void showPrice(String name1,String name2) {
+		System.out.println(name1);
+		System.out.println(name2);
+	}
+		public static void compare(int price) {
+			if(price<100000) {
+				System.out.println("The gifts are:Car cleaning kit");
+			}else if(100000<=price&&price<300000) {
+				System.out.println("The gifts are:Car cleaning kit + A gas card worth 1,000");
+			}else if(300000<=price&&price<500000) {
+				System.out.println("The gifts are:Free maintenance once a year for five years + Free car wash 10 times a year + A gas card worth 1,000");
+			}else if(500000<=price&&price<1000000) {
+				System.out.println("The gifts are:Two free inspections per year for seven years + 15 free car washes per year + One set of leather seats");
+			}else if(1000000<=price) {
+				System.out.println("The gifts are:All service items are free for life");
+			}
+		}
+	}
+	
+	class Brand{
+		String[] str=new String[3];
+		public static void putArray(String str[]) {
+			for(int i=0;i<3;i++) {
+			System.out.println(str[i]);
+		}
+		}		
+	}
+
+	
+	class Way{
+		String w1="1.Delivered by staff";
+		String w2="2.Pick up the car by yourself";
+		String fw;
+		public static void way(String w1,String w2){
+		System.out.println("Please choose the way and enter the number you want to pick up the car:");
+		System.out.println(w1);
+		System.out.println(w2);
+		}
+		public static void finalway(String fw) {
+			System.out.println(fw);		
+		}
+	}
+	class infor{
+		String name;
+		int number;
+		String car;
+		String gift;
+		String way;
+		public static void showinfor(int number,String name,String car,String way){
+			System.out.println("Your name is:"+name);
+			System.out.println("Your phone number is:"+number);
+			System.out.println("Your car is:"+car);
+
+			System.out.println("Your way to pick up the car is:"+way);
+		}
+	}
